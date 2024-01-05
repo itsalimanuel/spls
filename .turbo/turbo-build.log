@@ -1,0 +1,152 @@
+
+> frontend@0.1.0 build /Users/alikhalouf/Desktop/projects/spls/frontend
+> next build
+
+   ▲ Next.js 14.0.4
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: Unable to snapshot resolve dependencies
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: Unable to snapshot resolve dependencies
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+   Generating static pages (3/5) 
+ ⚠ Sending SIGTERM signal to static worker due to timeout of 60 seconds. Subsequent errors may be a result of the worker exiting.
+ ⚠ Restarted static page generation for /_not-found because it took more than 60 seconds
+ ⚠ See more info here https://nextjs.org/docs/messages/static-page-generation-timeout
+ ⚠ Restarted static page generation for / because it took more than 60 seconds
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+ ⚠ Sending SIGTERM signal to static worker due to timeout of 60 seconds. Subsequent errors may be a result of the worker exiting.
+ ⚠ Restarted static page generation for /_not-found because it took more than 60 seconds
+ ⚠ Restarted static page generation for / because it took more than 60 seconds
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Array.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:144064)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+RangeError: Maximum call stack size exceeded
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:139761
+    at Object.toJSON (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:143612)
+    at stringify (<anonymous>)
+    at eE (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:131997)
+    at eR (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:132440)
+    at Timeout._onTimeout (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:129220)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+ ⚠ Sending SIGTERM signal to static worker due to timeout of 60 seconds. Subsequent errors may be a result of the worker exiting.
+
+> Build error occurred
+Error: Static page generation for /_not-found is still timing out after 3 attempts. See more info here https://nextjs.org/docs/messages/static-page-generation-timeout
+    at onRestart (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/index.js:756:39)
+    at /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/lib/worker.js:95:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/export/index.js:515:20
+    at async Span.traceAsyncFn (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/trace/trace.js:147:20)
+    at async /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/export/index.js:513:24
+    at async Promise.all (index 3)
+    at async exportAppImpl (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/export/index.js:505:21)
+    at async /Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/export/index.js:678:16
+    at async Span.traceAsyncFn (/Users/alikhalouf/Desktop/projects/spls/frontend/node_modules/.pnpm/next@14.0.4_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/trace/trace.js:147:20)
+ ELIFECYCLE  Command failed with exit code 1.
