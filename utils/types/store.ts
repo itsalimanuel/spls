@@ -1,7 +1,7 @@
 type Player = {
   userName: string;
   value: number;
-  rank: number;
+  rank: any;
   balance: number;
   isOnline: boolean;
   speed: number;

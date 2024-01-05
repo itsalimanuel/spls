@@ -9,9 +9,14 @@ import {
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-function getRandomNumber(min: number, max: number, decimal: number) {
-  return Number((Math.random() * (max - min + 1) + min).toFixed(decimal));
-}
+const getRandomNumber = (
+  min: number,
+  max: number,
+  decimalPlaces: number
+): number => {
+  const factor = Math.pow(10, decimalPlaces);
+  return Math.round((Math.random() * (max - min) + min) * factor) / factor;
+};
 
 type Player = {
   id: number;
@@ -26,56 +31,49 @@ export const Start = () => {
   const [speed, setSpeed] = useState<any>(0);
   const [value, setValue] = useState(getRandomNumber(1, 9, 2));
   const [points, setPoints] = useState(50);
-  const [multiplier, setMultiplier] = useState<any>(1.0);
+  const [multiplier, setMultiplier] = useState(1.0);
   const [players, setPlayers] = useState<any>([]);
-  const player = useSelector((state: any) => state.player);
-  useEffect(() => {
-    let autoplayersGuess: any = [];
 
-    for (let i = 0; i < 5; i++) {
-      let data: Player = {
-        id: i,
-        name: i === 0 ? "You" : `CPU ${i}`,
-        point: "-",
-        multiplier: "-",
-        score: 0,
-      };
-      autoplayersGuess.push(data);
-    }
-    setPlayers(autoplayersGuess);
-    console.log(autoplayersGuess);
-    dispatch(updateRank(autoplayersGuess));
+  const player = useSelector((state: any) => state.player);
+
+  useEffect(() => {
+    const randomGuess = generaterandomGuess();
+    setPlayers(randomGuess);
+    dispatch(updateRank(randomGuess));
   }, []);
 
-  const generateRandomPlayers = () => {
-    let autoplayersGuess: any = [];
-    const data: Player = {
-      id: 0,
-      name: "You",
-      point: points,
-      multiplier: multiplier,
-      score: Math.round(points * multiplier),
-    };
-
-    autoplayersGuess.push(data);
-    for (let i = 0; i < 4; i++) {
-      let p: number = getRandomNumber(1, 700, 0),
-        m: number = getRandomNumber(1, 4, 2);
-
-      autoplayersGuess.push({
-        id: i + 1,
-        name: `CPU ${i + 1}`,
-        point: p,
-        multiplier: m,
-        score: Math.round(p * m),
-      });
-    }
-
-    setPlayers(autoplayersGuess);
-    dispatch(updateRank(autoplayersGuess));
+  const generaterandomGuess = (): Player[] => {
+    return Array.from({ length: 5 }, (_, i) =>
+      generateRandomPlayer(i, i === 0 ? "-" : `-`)
+    );
   };
 
-  const Satrt = () => {
+  const generateRandomPlayer = (id: number, name: string): Player => {
+    const points: number = getRandomNumber(1, 700, 0);
+    const multiplier: number = getRandomNumber(1, 4, 2);
+
+    return {
+      id,
+      name,
+      point: points,
+      multiplier,
+      score: player.userName ? Math.round(points * multiplier) : "-",
+    };
+  };
+
+  const generateRandomPlayers = (): void => {
+    const randomGuess: Player[] = [
+      generateRandomPlayer(0, "You"),
+      ...Array.from({ length: 4 }, (_, i) =>
+        generateRandomPlayer(i + 1, `CPU ${i + 1}`)
+      ),
+    ];
+
+    setPlayers(randomGuess);
+    dispatch(updateRank(randomGuess));
+  };
+
+  const SatrtGame = () => {
     if (0 > player.balance) {
       alert("You don't have enough balance");
       return false;
@@ -85,31 +83,20 @@ export const Start = () => {
     generateRandomPlayers();
     dispatch(updateValue(value));
     dispatch(updateBalance(player.balance - points));
-    setTimeout(handelBalance, 4000 + 1000 * speed);
+    setTimeout(handelBalance, 3000 + 1000 * speed);
   };
   const handelBalance = () => {
     dispatch(updateIsOnline(false));
-    if (value === multiplier) {
-      dispatch(updateBalance(player.balance + points));
-    } else {
-      dispatch(updateBalance(player.balance - points));
-    }
+    value === multiplier
+      ? dispatch(updateBalance(player.balance + points))
+      : dispatch(updateBalance(player.balance - points));
   };
 
-  const increasePoints = () => {
-    console.log(points);
-    if (points < 25) {
-      return false;
-    } else {
-      setPoints(points - 25);
-    }
-  };
   const decreasePoints = () => {
-    if (player.balance >= points + 25) {
-      return false;
-    } else {
-      setPoints(points + 25);
-    }
+    if (points > 25) setPoints(points - 25);
+  };
+  const increasePoints = () => {
+    if (player.balance >= points + 25) setPoints(points + 25);
   };
   const decreaseMultiplier = () => {
     if (multiplier >= 1.25) {
@@ -127,11 +114,10 @@ export const Start = () => {
         <div className="w-full">
           <div className="flex flex-wrap py-1 w-full border border-tertiary rounded-md bg-gradient-to-t from-secondary to-tertiary px-2">
             <span className="text-xs w-full mb-1 text-is-light-gray text-center">
-              {/* Points */}
             </span>
             <div className="flex w-full  items-center gap-2">
               <button
-                onClick={increasePoints}
+                onClick={decreasePoints}
                 className="w-8 py-1  text-center rounded-sm border border-tertiary text-xs cursor-pointer text-[#a7a7a7] bg-none hover:bg-secondary"
               >
                 ▼
@@ -146,7 +132,7 @@ export const Start = () => {
                 className="w-[calc(100%-58px)] text-sm text-center px-2.5 py-1.5 outline-none text-white bg-is-dark rounded-sm border border-tertiary"
               />
               <button
-                onClick={decreasePoints}
+                onClick={increasePoints}
                 className="w-8 py-1 text-center rounded-sm border border-tertiary text-xs cursor-pointer text-[#a7a7a7] bg-none hover:bg-secondary"
               >
                 ▲
@@ -156,9 +142,6 @@ export const Start = () => {
         </div>
         <div className="w-full">
           <div className="flex flex-wrap py-1 w-full border border-tertiary rounded-md bg-gradient-to-t from-secondary to-tertiary px-2">
-            <span className="text-xs w-full mb-1 text-is-light-gray text-center">
-              {/* Multiplier */}
-            </span>
             <div className="flex w-full  items-center gap-2">
               <button
                 onClick={decreaseMultiplier}
@@ -170,9 +153,9 @@ export const Start = () => {
                 type="number"
                 min={1}
                 max={10}
-                step={0.15}
+                step={0.25}
                 value={multiplier}
-                onChange={(e) => setMultiplier(e.target.value)}
+                onChange={(e) => setMultiplier(parseFloat(e.target.value))}
                 className="w-[calc(100%-58px)] text-sm text-center px-2.5 py-1.5 outline-none text-white bg-is-dark rounded-sm border border-tertiary"
               />
               <button
@@ -186,13 +169,14 @@ export const Start = () => {
         </div>
       </div>
       <button
-        onClick={Satrt}
+        onClick={SatrtGame}
+        disabled={player.isOnline}
         className="w-full p-2.5 mt-5 rounded-sm bg-is-gray text-white text-sm leading-[20px] font-[600] hover:bg-gradient-to-r hover:from-is-pink hover:to-is-orange disabled:bg-is-light"
       >
-        Satrt
+        {player.isOnline ? "Game is running" : "Start"}
       </button>
       <div className="mt-5 mb-1.5">
-        <span>🏆 Current round</span>
+        <span>🎗️ Current Round</span>
       </div>
       <div className="bg-secondary rounded-sm border border-tertiary overflow-hidden">
         <table className="bg-table text-[#f2f6ff] text-xs w-full">
@@ -239,7 +223,7 @@ export const Start = () => {
           </tbody>
         </table>
       </div>
-      <div className="mt-5 mb-1.5">⌛ Speed</div>
+      <div className="mt-5 mb-1.5">⚡ Speed</div>
       <div className="bg-secondary rounded-sm border border-tertiary p-2.5 pt-3">
         <input
           type="range"

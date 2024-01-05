@@ -4,8 +4,8 @@ import { Player } from "@/utils/types/store";
 const initialState: Player = {
   userName: "",
   value: 0,
-  rank: 0,
-  balance: 0,
+  rank: [],
+  balance: 1000,
   isOnline: false,
   speed: 0,
 };

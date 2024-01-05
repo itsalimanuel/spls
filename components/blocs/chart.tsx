@@ -1,6 +1,6 @@
 "use client";
 import { useMemo } from "react";
-import { LineChart, Line, XAxis, YAxis,Legend } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Legend } from "recharts";
 import { useSelector } from "react-redux";
 import CountUp from "react-countup";
 
@@ -29,16 +29,22 @@ const Chart = () => {
             suffix="x"
           ></CountUp>
         </div>
-        <LineChart width={500} height={300} data={chartData} key={player.value}>
+        <LineChart  width={500} height={300} data={chartData} key={player.value}>
           <Line
             type="monotone"
             dataKey="value"
             strokeWidth={3}
             stroke="#FC5C4A"
-            dot={true}
+            fill="#FC5C4A"
+            dot={false}
+            connectNulls={true}
             animationDuration={calculateSpeed()}
             hide={player.value === 0}
+            animateNewValues={true}
+            isAnimationActive={true}
+            activeDot={true}
           />
+
         </LineChart>
       </div>
     </div>
