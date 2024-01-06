@@ -11,7 +11,7 @@ export const Join = () => {
   const userName = useSelector((state: any) => state.player.userName);
   const handleSubmit = () => {
     dispatch(updateUserName(name));
-    // socket.emit("user-nickname", name);
+    socket.emit("user-nickname", name);
     setActive(true);
   };
 

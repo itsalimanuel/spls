@@ -113,8 +113,7 @@ export const Start = () => {
       <div className="flex flex-row gap-5">
         <div className="w-full">
           <div className="flex flex-wrap py-1 w-full border border-tertiary rounded-md bg-gradient-to-t from-secondary to-tertiary px-2">
-            <span className="text-xs w-full mb-1 text-is-light-gray text-center">
-            </span>
+            <span className="text-xs w-full mb-1 text-is-light-gray text-center"></span>
             <div className="flex w-full  items-center gap-2">
               <button
                 onClick={decreasePoints}
